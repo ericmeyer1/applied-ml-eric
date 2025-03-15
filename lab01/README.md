@@ -27,3 +27,24 @@ In this project, we use the **California Housing Dataset** to predict house pric
 
 These metrics suggest the model fits the data reasonably well, though there is still room for improvement.
 
+---
+
+#### **Learnings**
+
+- Gained experience in building a **linear regression model** for predictive analysis.
+- Learned to evaluate model performance using **R²**, **MAE**, and **RMSE**.
+- Improved data exploration and **visualization** skills through histograms, boxplots, and scatter plots.
+- Understood the significance of **train/test splitting** to validate the model and prevent overfitting.
+- Recognized that **feature selection** plays a crucial role in improving model accuracy and relevance.
+
+---
+
+#### **Tools Used**
+
+- **Python**: The primary programming language for data manipulation, modeling, and evaluation.
+- **Pandas**: For data manipulation and cleaning.
+- **NumPy**: Used for numerical operations and array handling.
+- **Matplotlib & Seaborn**: Utilized for data visualization and generating plots.
+- **Scikit-learn**: The key library for building and evaluating the linear regression model.
+- **Jupyter Notebook**: Employed for interactive coding, analysis, and visualization.
+
