@@ -29,11 +29,6 @@ In this project, we analyze the **Titanic Dataset** to predict passenger surviva
 - The **basic train/test split** introduced imbalance, affecting the test set.
 - The **stratified split** preserved class distributions, leading to a better-balanced dataset.
 
-##### **Model Performance**  
-- **Baseline Model: Logistic Regression**
-- **Accuracy**: TBD
-- **Precision/Recall/F1-score**: TBD (pending model evaluation)
-
 ---
 
 #### **Learnings**  
