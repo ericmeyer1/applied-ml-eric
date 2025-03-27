@@ -1,50 +1,28 @@
-### **Machine Learning Project: Titanic Survival Prediction**  
-**Author**: Eric Meyer  
-**Date**: 03/19/2025  
-**Objective**: Build a classification model to predict passenger survival on the Titanic based on key features.
+# Lab 3: Titanic - Predicting Survival
 
----
+### Author: Eric Meyer
+### Date: 3/26/2025
 
-#### **Project Overview**  
-In this project, we analyze the **Titanic Dataset** to predict passenger survival based on features such as **age, fare, passenger class (pclass), sex, and family size**. We apply **classification models** and compare different train/test splitting techniques.
+## Introduction
 
----
+In this project, we predict survival on the Titanic using various machine learning models. The dataset includes various features such as passenger age, sex, class, and more. We will train and evaluate three common classification models: Decision Tree, Support Vector Machine (SVM), and Neural Network (NN). The goal is to assess the performance of each model and determine which factors most influence the prediction of survival.
 
-#### **Key Steps**  
-1. Data Exploration & Visualization
-2. Feature Selection: Age, Fare, Pclass, Sex, Family Size
-3. Train/Test Split (Basic vs. Stratified)
-4. Model Training: Logistic Regression (baseline model)
-5. Model Evaluation: Accuracy, Precision, Recall, F1-score
+## Libraries Used
 
----
+The following Python libraries are used in this project:
 
-#### **Results**  
-##### **Class Distribution**
-- **Original Dataset:** (Survived: 38.4%, Not Survived: 61.6%)
-- **Basic Train/Test Split:** (Train: 38.9%, Test: 36.3%)
-- **Stratified Train/Test Split:** (Train: 38.3%, Test: 38.5%)
+- `seaborn` - For loading and visualizing the Titanic dataset.
+- `pandas` - For data manipulation and cleaning.
+- `matplotlib` - For plotting and visualizations.
+- `sklearn` - For implementing classification models and evaluation metrics.
 
-##### **Train/Test Splitting Comparison**  
-- The **basic train/test split** introduced imbalance, affecting the test set.
-- The **stratified split** preserved class distributions, leading to a better-balanced dataset.
-
----
-
-#### **Learnings**  
-- Explored the importance of **feature selection** in classification problems.
-- Understood the impact of **stratified sampling** vs. **random train/test split**.
-- Learned how to handle **imbalanced datasets** to improve model fairness.
-- Gained experience in **classification metrics** beyond accuracy.
-- Strengthened data preprocessing and exploratory data analysis (EDA) skills.
-
----
-
-#### **Tools Used**  
-- **Python**: For data processing, model training, and evaluation.
-- **Pandas**: Used for data manipulation and analysis.
-- **NumPy**: For numerical operations and calculations.
-- **Matplotlib & Seaborn**: Utilized for data visualization.
-- **Scikit-learn**: Key library for classification models and performance evaluation.
-- **Jupyter Notebook**: Interactive environment for coding, analysis, and visualization.
-
+```python
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import StratifiedShuffleSplit
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.svm import SVC
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import classification_report, confusion_matrix
+import seaborn as sns
