@@ -48,6 +48,55 @@ Several features were tested as input to the models:
 - **Feature Engineering:** Additional features, such as BMI or socioeconomic class, could be explored to improve predictions.
 - **Model Ensembling:** Combining the strengths of different models through ensembling methods like bagging or boosting might provide better performance than using a single model.
 
+## Neural Network Model Results
+
+Below are the performance metrics for the Neural Network model across three different test cases. Each case includes precision, recall, F1-score, and other evaluation metrics.
+
+## Neural Network - Case 1
+
+| **Metric**        | **Class 0** | **Class 1** | **Macro Avg** | **Weighted Avg** |
+|-------------------|-------------|-------------|---------------|------------------|
+| **Precision**     | 0.71        | 0.51        | 0.61          | 0.64             |
+| **Recall**        | 0.65        | 0.58        | 0.62          | 0.63             |
+| **F1-Score**      | 0.68        | 0.54        | 0.61          | 0.63             |
+| **Accuracy**      | 0.63        |             |               |                  |
+| **Support**       | 110         | 69          | 179           | 179              |
+
+---
+
+## Neural Network - Case 2
+
+| **Metric**        | **Class 0** | **Class 1** | **Macro Avg** | **Weighted Avg** |
+|-------------------|-------------|-------------|---------------|------------------|
+| **Precision**     | 0.63        | 0.71        | 0.67          | 0.66             |
+| **Recall**        | 0.98        | 0.07        | 0.53          | 0.63             |
+| **F1-Score**      | 0.77        | 0.13        | 0.45          | 0.52             |
+| **Accuracy**      | 0.63        |             |               |                  |
+| **Support**       | 110         | 69          | 179           | 179              |
+
+---
+
+## Neural Network - Case 3
+
+| **Metric**        | **Class 0** | **Class 1** | **Macro Avg** | **Weighted Avg** |
+|-------------------|-------------|-------------|---------------|------------------|
+| **Precision**     | 0.71        | 0.56        | 0.63          | 0.65             |
+| **Recall**        | 0.75        | 0.51        | 0.63          | 0.65             |
+| **F1-Score**      | 0.73        | 0.53        | 0.63          | 0.65             |
+| **Accuracy**      | 0.65        |             |               |                  |
+| **Support**       | 110         | 69          | 179           | 179              |
+
+---
+
+### Notes:
+- **Accuracy** represents the proportion of correct predictions across all classes.
+- **Precision** refers to the proportion of positive predictions that were correctly classified.
+- **Recall** indicates the proportion of actual positives correctly identified by the model.
+- **F1-Score** is the harmonic mean of precision and recall, providing a balanced metric.
+- **Macro Avg** is the average of the precision, recall, and F1-score for each class.
+- **Weighted Avg** is the average, weighted by the support (the number of true instances for each label).
+
+
 ## Libraries Used
 
 The following Python libraries are used in this project:
