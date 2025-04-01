@@ -11,7 +11,35 @@ This project applies machine learning techniques to the **Banknote Authenticatio
 
 ## **Project Files**
 - 📄 **[Jupyter Notebook](https://github.com/ericmeyer1/applied-ml-eric/blob/main/midterm/ml_midterm_eric.ipynb)** – Full implementation with code and explanations.  
-- 📄 **[Peer Review](./peer_review.md)** – Review feedback and reflections. 
+- 📄 **[Peer Review](https://github.com/SchroderJ-pixel/ml-04-mushroom-classification/blob/main/classifiation_schroder.ipynb)** – Review feedback and reflections. 
+
+1. Clarity & Organization
+
+Strengths: The notebook is well-structured with clear sections, including data exploration, feature engineering, and model evaluation. Markdown cells are used effectively to explain each step.
+
+Areas for Improvement: Some sections could benefit from more detailed explanations. For instance, the transition between data preprocessing and feature selection could be smoother with an introductory summary.
+
+2. Feature Selection & Justification
+
+Strengths: The chosen features align well with the project objectives. There is a logical progression from raw data to engineered features.
+
+Areas for Improvement: While the features make sense, a brief justification for why certain features were included or excluded would improve transparency. Consider adding a correlation heatmap or feature importance plot to support these choices.
+
+3. Model Performance & Comparisons
+
+Strengths: The notebook presents multiple models and provides performance metrics for each, allowing for a meaningful comparison.
+
+Areas for Improvement: The performance results are clear, but additional visualizations (e.g., ROC curves or residual plots) could further illustrate the differences between models. Additionally, a discussion on why one model outperforms another would enhance the analysis.
+
+4. Reflection Quality
+
+Strengths: The conclusions summarize key insights effectively, highlighting what worked well and potential limitations.
+
+Areas for Improvement: A section discussing potential future improvements (e.g., additional features, hyperparameter tuning, or alternative modeling approaches) would be beneficial.
+
+Overall Feedback
+
+The notebook is well-structured and demonstrates a solid approach to data analysis and modeling. Enhancing feature justification, adding visual comparisons for model performance, and expanding the reflection section would further improve the overall quality. Great work, Justin!
 
 ---
 
