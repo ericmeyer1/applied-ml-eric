@@ -2,7 +2,7 @@
 
 ### Author: Eric Meyer
 ### Date: 3/26/2025
-### Project Notebook: [ML Midterm Folder]([https://www.genome.gov/](https://github.com/ericmeyer1/applied-ml-eric/tree/main/midterm))
+### Project Notebook: [ML Midterm Folder](https://github.com/ericmeyer1/applied-ml-eric/tree/main/midterm)
 
 ## **Overview**
 This project applies machine learning techniques to the **Banknote Authentication Dataset** in order to classify banknotes as either authentic or fraudulent. The dataset consists of various features extracted from banknotes, and the goal is to predict whether a given banknote is genuine (class 0) or fake (class 1). In this project, we explored the **Decision Tree** and **Random Forest** classification models to achieve the best possible performance in predicting banknote authenticity.
