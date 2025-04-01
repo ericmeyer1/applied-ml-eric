@@ -10,7 +10,7 @@ This project applies machine learning techniques to the **Banknote Authenticatio
 ---
 
 ## **Project Files**
-- 📄 **[Jupyter Notebook]([./notebook.ipynb](https://github.com/ericmeyer1/applied-ml-eric/blob/main/midterm/ml_midterm_eric.ipynb))** – Full implementation with code and explanations.  
+- 📄 **[Jupyter Notebook](https://github.com/ericmeyer1/applied-ml-eric/blob/main/midterm/ml_midterm_eric.ipynb)** – Full implementation with code and explanations.  
 - 📄 **[Peer Review](./peer_review.md)** – Review feedback and reflections. 
 
 ---
