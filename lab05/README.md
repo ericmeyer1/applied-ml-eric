@@ -1,57 +1,73 @@
-# Lab 4: Titanic Fare Prediction Using Regression
+# Lab 5: Wine Quality Prediction Using Ensemble Models
 
 ### Author: Eric Meyer
-### Date: 4/4/2025
+### Date: 4/9/2025
 
 ## Overview
-This project explores various regression techniques to predict passenger **fare** from the Titanic dataset.  
-We use linear, polynomial, and regularized regression models to evaluate how well features like **age**, **passenger class**, and **family size** explain variation in ticket prices.
+This project uses ensemble machine learning techniques to predict the **quality of red wine** based on physicochemical test results.  
+By comparing models like **Random Forest** and **Gradient Boosting**, we explore how tree-based methods handle a multiclass classification problem with nonlinear patterns and complex feature interactions.
 
 ## Project Components
-- Data Cleaning & Feature Engineering  
+- Data Preprocessing & Feature Standardization  
 - Exploratory Data Analysis (EDA)  
-- Model Training:
-  - Linear Regression  
-  - Ridge Regression  
-  - ElasticNet  
-  - Polynomial Regression (up to degree 8)  
-- Model Evaluation & Comparison  
-- Visualizations & Interpretation  
+- Model Training & Tuning:
+  - Random Forest Classifier  
+  - Gradient Boosting Classifier  
+- Model Evaluation:
+  - Accuracy & F1 Score Comparison  
+  - Overfitting Detection via Train/Test Gaps  
+- Conclusions & Insights  
 
 ## Dataset
-We use the Titanic dataset available from the Seaborn library. Key features selected:
-- `age`: Passenger age  
-- `pclass`: Ticket class (1st, 2nd, 3rd)  
-- `sibsp` and `parch`: Used to create `family_size`  
-- `fare`: Target variable (continuous)
+The dataset comes from the UCI Machine Learning Repository and contains **red wine quality** ratings (scores from 3–8) and the following features:
 
-Additional preprocessing:
-- Missing values imputed or removed  
-- Created new feature: `family_size = sibsp + parch + 1`
+- `fixed acidity`, `volatile acidity`, `citric acid`  
+- `residual sugar`, `chlorides`, `free sulfur dioxide`, `total sulfur dioxide`  
+- `density`, `pH`, `sulphates`, `alcohol`  
+- `quality`: Target variable (ordinal multiclass)
+
+Preprocessing steps:
+- Removed outliers for improved model stability  
+- Scaled features using `StandardScaler`  
+- Stratified split into training and test sets  
 
 ## Results
 
 ### Model Comparison
 
-| Model             | R² Score | RMSE   | MAE   |
-|------------------|----------|--------|--------|
-| Linear            | 0.317    | 31.44  | 20.70  |
-| Ridge             | 0.317    | 31.43  | 20.69  |
-| ElasticNet        | **0.352**| 30.61  | 19.61  |
-| Polynomial (deg 3)| 0.346    | 30.76  | **18.52** |
+| Model                   | Train Accuracy | Test Accuracy | Train F1 | Test F1 | Accuracy Gap | F1 Score Gap |
+|------------------------|----------------|---------------|----------|---------|---------------|--------------|
+| Random Forest (100)    | 1.0000         | 0.8875        | 1.0000   | 0.8661  | 0.1125        | 0.1339       |
+| Gradient Boosting (100)| 0.9601         | 0.8563        | 0.9584   | 0.8411  | 0.1039        | 0.1173       |
 
-- **Best Overall:** ElasticNet performed best based on R² and RMSE.
-- **Best MAE:** Polynomial (degree 3) captured lower average error, suggesting better performance on smaller fare values.
+- **Best Accuracy & F1:** Random Forest achieved the highest performance but showed stronger signs of overfitting.  
+- **More Stable:** Gradient Boosting had slightly lower metrics but better generalization potential.
 
 ## Visualizations
-- Scatter plots of actual vs predicted fares  
-- Polynomial regression curves (degrees 3 through 8)  
-- Comparison plots of error metrics across models  
+- Confusion matrices for both models  
+- Feature importance plots (Random Forest & Gradient Boosting)  
+- Bar charts comparing accuracy and F1 scores across models  
+- Train vs Test performance gap visuals
+
+## Conclusions & Insights
+- Ensemble models significantly outperform simpler classifiers on this dataset due to their ability to model **nonlinear relationships** and **interactions**.
+- **Random Forest** performed best in raw metrics but was highly overfit to the training set.
+- **Gradient Boosting** is more tunable and showed greater promise for scalability and generalization with hyperparameter tuning.
+
+## Future Improvements
+If this were a competition or real deployment scenario, I would:
+
+- Perform hyperparameter tuning (e.g., `max_depth`, `learning_rate`)  
+- Try advanced boosters like **XGBoost** or **LightGBM**  
+- Use **SHAP values** to improve model explainability  
+- Incorporate **class balancing techniques** (SMOTE or weighting)  
+- Use **cross-validation** to reduce performance variance  
+- Engineer domain-driven features (e.g., `alcohol/sulphates` ratio)
+
+---
 
 ## Setup Instructions
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/ericmeyer1/applied-ml-eric.git
-
-
